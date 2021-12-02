@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211202 10:42:58.313" rpa="false" schemaversion="2">
+<suite id="s1" name="loginTest modified" source="c:\Users\JING019\OneDrive - Bertelsmann SE &amp; Co. KGaA\Documents\Automation mentoring\demo_proj_robot\test_suites\loginTest_modified.robot">
+<test id="s1-t1" name="Login with admin user">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211202 10:42:58.669" level="INFO">Opening browser 'chrome' to base url 'https://clever.com/oauth/sis/login?target=NTVmMjIwM2Y0NDMxNGEwMTAwMDA0OGUx%3BNGM2M2MxY2Y2MjNkY2U4MmNhYWM%3D%3BaHR0cHM6Ly9jbGV2ZXIuY29tL2luL2F1dGhfY2FsbGJhY2s%3D%3BNjY1ODJiN2RlYjIzNTU0NDYzOTQwYzc3MjRlMzZlY2VjOTZlOWEyNTU0MjkwMDk3ZDllNjZkMDIwNDMyMThmZQ%3D%3D%3BY29kZQ%3D%3D%3B&amp;skip=1&amp;default_badge='.</msg>
+<status status="PASS" starttime="20211202 10:42:58.668" endtime="20211202 10:43:31.512"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211202 10:43:31.513" endtime="20211202 10:43:31.516"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:31.517" level="INFO">Typing text 'skelly' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20211202 10:43:31.517" endtime="20211202 10:43:31.637"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:31.638" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20211202 10:43:31.690" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211202 10:43:31.749" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211202 10:43:31.637" endtime="20211202 10:43:31.750"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=UsernamePasswordForm--loginButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:31.751" level="INFO">Clicking button 'id=UsernamePasswordForm--loginButton'.</msg>
+<status status="PASS" starttime="20211202 10:43:31.750" endtime="20211202 10:43:34.688"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>id=TopBarHomeroomButton</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20211202 10:43:34.806" level="INFO">Current page contains button 'id=TopBarHomeroomButton'.</msg>
+<status status="PASS" starttime="20211202 10:43:34.689" endtime="20211202 10:43:34.806"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=TopBarClassesButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:34.807" level="INFO">Clicking button 'id=TopBarClassesButton'.</msg>
+<status status="PASS" starttime="20211202 10:43:34.807" endtime="20211202 10:43:34.913"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${classes}</var>
+<arg>class:TeacherClasses--SectionCard--CourseName--Shortname</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20211202 10:43:35.262" level="INFO">${classes} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a46b7aad35d20522ed2dcf9f00ba9be8", element="96ffc985-79f3-4598-86d8-94b31dd95965")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20211202 10:43:34.914" endtime="20211202 10:43:35.262"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{classes}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a46b7aad35d20522ed2dcf9f00ba9be8", element="96ffc985-79f3-4598-86d8-94b31dd95965")&gt;</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211202 10:43:35.263" endtime="20211202 10:43:35.265"/>
+</kw>
+<status status="PASS" starttime="20211202 10:43:35.263" endtime="20211202 10:43:35.265"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a46b7aad35d20522ed2dcf9f00ba9be8", element="d0fbb2b1-c858-482b-b519-d40e25211155")&gt;</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211202 10:43:35.265" endtime="20211202 10:43:35.267"/>
+</kw>
+<status status="PASS" starttime="20211202 10:43:35.265" endtime="20211202 10:43:35.267"/>
+</iter>
+<status status="PASS" starttime="20211202 10:43:35.263" endtime="20211202 10:43:35.267"/>
+</for>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=Menu--trigger--1</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:35.269" level="INFO">Clicking button 'id=Menu--trigger--1'.</msg>
+<status status="PASS" starttime="20211202 10:43:35.268" endtime="20211202 10:43:35.354"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Log out</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211202 10:43:35.355" level="INFO">Clicking element 'link=Log out'.</msg>
+<status status="PASS" starttime="20211202 10:43:35.355" endtime="20211202 10:43:36.664"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211202 10:43:36.665" endtime="20211202 10:43:38.836"/>
+</kw>
+<status status="PASS" starttime="20211202 10:42:58.667" endtime="20211202 10:43:38.838"/>
+</test>
+<status status="PASS" starttime="20211202 10:42:58.316" endtime="20211202 10:43:38.844"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginTest modified">loginTest modified</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
