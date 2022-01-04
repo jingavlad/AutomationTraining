@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220104 17:37:42.702" rpa="false" schemaversion="2">
+<suite id="s1" name="Emag" source="c:\Users\JING019\OneDrive - Bertelsmann SE &amp; Co. KGaA\Documents\Automation mentoring\Task 2 - emag\demo_proj_robot\test_suites\Emag.robot">
+<test id="s1-t1" name="Buy Item from Emag">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220104 17:37:43.186" level="INFO">Opening browser 'chrome' to base url 'https://www.emag.ro'.</msg>
+<status status="PASS" starttime="20220104 17:37:43.185" endtime="20220104 17:37:51.369"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220104 17:37:51.371" endtime="20220104 17:37:51.621"/>
+</kw>
+<kw name="Navigate to GamingTab" library="EmagMainPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GamingTab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:51.622" level="INFO">Clicking element '//span[text()='Gaming, Carti &amp; Birotica']'.</msg>
+<status status="PASS" starttime="20220104 17:37:51.622" endtime="20220104 17:37:53.622"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:51.621" endtime="20220104 17:37:53.622"/>
+</kw>
+<kw name="Navigate to PlaystationTab" library="EmagMainPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${GamingTabTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:53.624" endtime="20220104 17:37:53.659"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PlaystationTab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:53.661" level="INFO">Clicking element '//a[contains(.,'Playstation')]'.</msg>
+<status status="PASS" starttime="20220104 17:37:53.660" endtime="20220104 17:37:54.565"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:53.623" endtime="20220104 17:37:54.565"/>
+</kw>
+<kw name="Navigate to ConsolePlaystationTab" library="EmagMainPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PlaystationTabTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:54.567" endtime="20220104 17:37:54.614"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ConsolePlaystationTab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:54.615" level="INFO">Clicking element '//a[contains(.,'Console Playstation')]'.</msg>
+<status status="PASS" starttime="20220104 17:37:54.614" endtime="20220104 17:37:55.397"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:54.566" endtime="20220104 17:37:55.397"/>
+</kw>
+<kw name="Sort the products" library="EmagProductPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ConsoleHardwareSonyTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:55.399" endtime="20220104 17:37:55.500"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SortOption}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:55.501" level="INFO">Clicking element '//span[text()='Cele mai populare']'.</msg>
+<status status="PASS" starttime="20220104 17:37:55.501" endtime="20220104 17:37:55.576"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Newest}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:55.576" endtime="20220104 17:37:55.861"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Newest}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:55.862" level="INFO">Clicking element '//a[contains(.,'Cele mai noi')]'.</msg>
+<status status="PASS" starttime="20220104 17:37:55.862" endtime="20220104 17:37:55.931"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${SortOption}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220104 17:37:55.932" endtime="20220104 17:37:56.355"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:55.398" endtime="20220104 17:37:56.355"/>
+</kw>
+<kw name="Add to Cart first available product" library="EmagProductPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PS5plusGames}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:56.357" level="INFO">Clicking element '//*[@class="btn btn-sm btn-primary btn-emag btn-block yeahIWantThisProduct"]'.</msg>
+<status status="PASS" starttime="20220104 17:37:56.356" endtime="20220104 17:37:56.467"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:56.356" endtime="20220104 17:37:56.467"/>
+</kw>
+<kw name="Go to Cart" library="EmagProductPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ProductAdded}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:56.469" endtime="20220104 17:37:56.976"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CartTab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220104 17:37:56.977" level="INFO">Clicking element '//a[contains(.,'Vezi detalii cos')]'.</msg>
+<status status="PASS" starttime="20220104 17:37:56.977" endtime="20220104 17:37:58.007"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:56.468" endtime="20220104 17:37:58.007"/>
+</kw>
+<kw name="Verify Cart" library="EmagProductPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CartTabTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220104 17:37:58.009" endtime="20220104 17:37:58.061"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220104 17:37:58.086" level="INFO">Element '//a[contains(.,'Consola PlayStation 5 (B-Chasis) + Joc PS5 Ratchet &amp; Clank: Rift Apart + Joc Marvel’s Spider Man: Miles Morales PS5 + Joc Demon`s Soul Remake! PS5')]' is displayed.</msg>
+<status status="PASS" starttime="20220104 17:37:58.061" endtime="20220104 17:37:58.087"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:58.009" endtime="20220104 17:37:58.087"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220104 17:37:58.088" endtime="20220104 17:38:00.306"/>
+</kw>
+<status status="PASS" starttime="20220104 17:37:43.184" endtime="20220104 17:38:00.307"/>
+</test>
+<status status="PASS" starttime="20220104 17:37:42.705" endtime="20220104 17:38:00.310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Emag">Emag</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
