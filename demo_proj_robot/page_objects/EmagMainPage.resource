@@ -2,8 +2,6 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${browser}                    chrome
-${url}                        https://www.emag.ro
 ${GamingTab}                  //span[text()='Gaming, Carti & Birotica']
 ${GamingTabTitle}             //h1[contains(.,'Gaming, Carti & Birotica')]
 ${PlaystationTab}             //a[contains(.,'Playstation')]

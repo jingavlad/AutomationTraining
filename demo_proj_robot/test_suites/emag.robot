@@ -5,6 +5,10 @@ Library     ../python_lib/custom_keywords.py
 Library    Collections
 Library    SeleniumLibrary
 
+*** Variables ***
+${browser}                    chrome
+${url}                        https://www.emag.ro
+
 *** Test Cases ***
 Buy Item from Emag
     Open Browser    url=${url}    browser=${browser}
