@@ -21,3 +21,5 @@ Buy Item from Emag
     Go to Cart
     Verify Cart
     Close Browser
+
+#moved browser & url from resource file to robot file
