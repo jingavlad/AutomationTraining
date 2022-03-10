@@ -1,143 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220204 18:22:50.894" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220310 14:23:46.113" rpa="false" schemaversion="2">
 <suite id="s1" name="Emag" source="c:\Users\JING019\OneDrive - Bertelsmann SE &amp; Co. KGaA\Documents\Automation mentoring\Task 2 - emag.ro\demo_proj_robot\test_suites\emag.robot">
-<test id="s1-t1" name="Buy Item from Emag">
+<test id="s1-t1" name="Open Web Site">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220204 18:22:51.318" level="INFO">Opening browser 'chrome' to base url 'https://www.emag.ro'.</msg>
-<status status="PASS" starttime="20220204 18:22:51.317" endtime="20220204 18:22:55.606"/>
+<msg timestamp="20220310 14:23:46.802" level="INFO">Opening browser 'chrome' to base url 'https://www.emag.ro'.</msg>
+<status status="PASS" starttime="20220310 14:23:46.801" endtime="20220310 14:23:51.020"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220204 18:22:55.607" endtime="20220204 18:22:55.827"/>
+<status status="PASS" starttime="20220310 14:23:51.021" endtime="20220310 14:23:51.267"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${acceptCookiesButton}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookiesButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220310 14:23:51.271" level="INFO">Clicking element 'css:.js-accept'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220310 14:23:53.086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-141.png"&gt;&lt;img src="selenium-screenshot-141.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220310 14:23:52.429" endtime="20220310 14:23:53.087"/>
+</kw>
+<msg timestamp="20220310 14:23:53.099" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (1209, 736)
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0095FDC3+2555331]
+	Ordinal0 [0x008F77F1+2127857]
+	Ordinal0 [0x007F2E08+1060360]
+	Ordinal0 [0x008248CF+1263823]
+	Ordinal0 [0x00822B10+1256208]
+	Ordinal0 [0x0082076B+1247083]
+	Ordinal0 [0x0081F559+1242457]
+	Ordinal0 [0x00814FB3+1200051]
+	Ordinal0 [0x00837B0C+1342220]
+	Ordinal0 [0x00814984+1198468]
+	Ordinal0 [0x00837C14+1342484]
+	Ordinal0 [0x008475FA+1406458]
+	Ordinal0 [0x00837976+1341814]
+	Ordinal0 [0x008136B6+1193654]
+	Ordinal0 [0x00814546+1197382]
+	GetHandleVerifier [0x00AF9622+1619522]
+	GetHandleVerifier [0x00BA882C+2336844]
+	GetHandleVerifier [0x009F23E1+541697]
+	GetHandleVerifier [0x009F1443+537699]
+	Ordinal0 [0x008FD18E+2150798]
+	Ordinal0 [0x00901518+2168088]
+	Ordinal0 [0x00901660+2168416]
+	Ordinal0 [0x0090B330+2208560]
+	BaseThreadInitThunk [0x74F6FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x770F7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x770F7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220310 14:23:51.270" endtime="20220310 14:23:53.099"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookiesButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220310 14:23:54.110" level="INFO">Clicking element 'css:.js-accept'.</msg>
+<status status="PASS" starttime="20220310 14:23:54.109" endtime="20220310 14:23:54.460"/>
+</kw>
+<status status="PASS" starttime="20220310 14:23:51.268" endtime="20220310 14:23:54.460"/>
 </kw>
 <kw name="Navigate to GamingTab" library="EmagMainPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${GamingTab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:22:55.829" level="INFO">Clicking element '//span[text()='Gaming, Carti &amp; Birotica']'.</msg>
-<status status="PASS" starttime="20220204 18:22:55.828" endtime="20220204 18:22:57.661"/>
+<msg timestamp="20220310 14:23:54.462" level="INFO">Clicking element '//span[text()='Gaming, Carti &amp; Birotica']'.</msg>
+<status status="PASS" starttime="20220310 14:23:54.462" endtime="20220310 14:23:56.094"/>
 </kw>
-<status status="PASS" starttime="20220204 18:22:55.827" endtime="20220204 18:22:57.661"/>
+<status status="PASS" starttime="20220310 14:23:54.461" endtime="20220310 14:23:56.095"/>
 </kw>
 <kw name="Navigate to PlaystationTab" library="EmagMainPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${GamingTabTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:22:57.662" endtime="20220204 18:22:57.693"/>
+<status status="PASS" starttime="20220310 14:23:56.099" endtime="20220310 14:23:56.149"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PlaystationTab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:22:57.693" level="INFO">Clicking element '//a[contains(.,'Playstation')]'.</msg>
-<status status="PASS" starttime="20220204 18:22:57.693" endtime="20220204 18:22:58.664"/>
+<msg timestamp="20220310 14:23:56.153" level="INFO">Clicking element '//a[contains(.,'Playstation')]'.</msg>
+<status status="PASS" starttime="20220310 14:23:56.150" endtime="20220310 14:23:57.427"/>
 </kw>
-<status status="PASS" starttime="20220204 18:22:57.662" endtime="20220204 18:22:58.664"/>
+<status status="PASS" starttime="20220310 14:23:56.098" endtime="20220310 14:23:57.428"/>
 </kw>
 <kw name="Navigate to ConsolePlaystationTab" library="EmagMainPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${PlaystationTabTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:22:58.665" endtime="20220204 18:22:58.723"/>
+<status status="PASS" starttime="20220310 14:23:57.438" endtime="20220310 14:23:57.841"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ConsolePlaystationTab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:22:58.724" level="INFO">Clicking element '//a[contains(.,'Console Playstation')]'.</msg>
-<status status="PASS" starttime="20220204 18:22:58.724" endtime="20220204 18:22:59.575"/>
+<msg timestamp="20220310 14:23:57.842" level="INFO">Clicking element '//a[contains(.,'Console Playstation')]'.</msg>
+<status status="PASS" starttime="20220310 14:23:57.841" endtime="20220310 14:23:58.592"/>
 </kw>
-<status status="PASS" starttime="20220204 18:22:58.665" endtime="20220204 18:22:59.575"/>
+<status status="PASS" starttime="20220310 14:23:57.438" endtime="20220310 14:23:58.593"/>
 </kw>
-<kw name="Sort the products" library="EmagProductPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ConsoleHardwareSonyTitle}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:22:59.576" endtime="20220204 18:22:59.600"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SortOption}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:22:59.601" level="INFO">Clicking element '//span[text()='Cele mai populare']'.</msg>
-<status status="PASS" starttime="20220204 18:22:59.600" endtime="20220204 18:22:59.692"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Newest}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:22:59.693" endtime="20220204 18:22:59.723"/>
+<kw name="Select 'Cele mai noi' sort option from dropdownbutton" library="EmagProductPage" sourcename="Select '${sort_option:Cele mai populare|Cele mai noi|Pret crescator|Pret descrescator|Nr. review-uri|Discount %}' sort option from dropdownbutton">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${dropdownbutton}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220310 14:23:58.598" endtime="20220310 14:23:59.106"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Newest}</arg>
+<arg>${dropdownbutton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:22:59.723" level="INFO">Clicking element '//a[contains(.,'Cele mai noi')]'.</msg>
-<status status="PASS" starttime="20220204 18:22:59.723" endtime="20220204 18:22:59.781"/>
+<msg timestamp="20220310 14:23:59.108" level="INFO">Clicking element 'xpath://*[text()='Ordoneaza dupa:']/parent::*/*[contains(@class,'btn-dropdown')]'.</msg>
+<status status="PASS" starttime="20220310 14:23:59.107" endtime="20220310 14:23:59.630"/>
 </kw>
-<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
-<arg>${SortOption}</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" starttime="20220204 18:22:59.782" endtime="20220204 18:23:00.208"/>
+<kw name="Replace String" library="String">
+<var>${placeHolder}</var>
+<arg>${sortOptionTemplate}</arg>
+<arg>sort_option</arg>
+<arg>${sort_option}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220310 14:23:59.631" level="INFO">${placeHolder} = xpath://*[@class='dropdown-menu']//*[text()='Cele mai noi']</msg>
+<status status="PASS" starttime="20220310 14:23:59.631" endtime="20220310 14:23:59.631"/>
 </kw>
-<status status="PASS" starttime="20220204 18:22:59.576" endtime="20220204 18:23:00.208"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${placeHolder}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220310 14:23:59.632" level="INFO">Clicking element 'xpath://*[@class='dropdown-menu']//*[text()='Cele mai noi']'.</msg>
+<status status="PASS" starttime="20220310 14:23:59.632" endtime="20220310 14:23:59.736"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220310 14:24:02.745" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220310 14:23:59.737" endtime="20220310 14:24:02.745"/>
+</kw>
+<status status="PASS" starttime="20220310 14:23:58.597" endtime="20220310 14:24:02.745"/>
+</kw>
+<kw name="Save the name of the selected product" library="EmagProductPage">
+<var>${ProductName}</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${NameOfFirstItem}</var>
+<arg>${FirstPS5Product}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220310 14:24:02.796" level="INFO">${NameOfFirstItem} = Consola PlayStation 5 (B-Chassis) + Joc PS5 Gran Turismo 7 + Joc PS5 Horizon Forbidden West + Joc PS5 Marvel’s Spider Man: Miles Morales + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220310 14:24:02.746" endtime="20220310 14:24:02.796"/>
+</kw>
+<msg timestamp="20220310 14:24:02.796" level="INFO">${ProductName} = Consola PlayStation 5 (B-Chassis) + Joc PS5 Gran Turismo 7 + Joc PS5 Horizon Forbidden West + Joc PS5 Marvel’s Spider Man: Miles Morales + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220310 14:24:02.746" endtime="20220310 14:24:02.796"/>
 </kw>
 <kw name="Add to Cart first available product" library="EmagProductPage">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${PS5plusGames}</arg>
+<arg>${AdaugaInCos}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:23:00.210" level="INFO">Clicking element '//*[@class="btn btn-sm btn-primary btn-emag btn-block yeahIWantThisProduct"]'.</msg>
-<status status="PASS" starttime="20220204 18:23:00.209" endtime="20220204 18:23:00.330"/>
+<msg timestamp="20220310 14:24:02.798" level="INFO">Clicking element '//*[@class="btn btn-sm btn-primary btn-emag btn-block yeahIWantThisProduct"]'.</msg>
+<status status="PASS" starttime="20220310 14:24:02.798" endtime="20220310 14:24:02.870"/>
 </kw>
-<status status="PASS" starttime="20220204 18:23:00.209" endtime="20220204 18:23:00.330"/>
+<status status="PASS" starttime="20220310 14:24:02.797" endtime="20220310 14:24:02.870"/>
 </kw>
 <kw name="Go to Cart" library="EmagProductPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${ProductAdded}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:23:00.332" endtime="20220204 18:23:00.855"/>
+<status status="PASS" starttime="20220310 14:24:02.872" endtime="20220310 14:24:03.752"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CartTab}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220204 18:23:00.856" level="INFO">Clicking element '//a[contains(.,'Vezi detalii cos')]'.</msg>
-<status status="PASS" starttime="20220204 18:23:00.856" endtime="20220204 18:23:02.022"/>
+<msg timestamp="20220310 14:24:03.754" level="INFO">Clicking element '//a[contains(.,'Vezi detalii cos')]'.</msg>
+<status status="PASS" starttime="20220310 14:24:03.753" endtime="20220310 14:24:05.008"/>
 </kw>
-<status status="PASS" starttime="20220204 18:23:00.331" endtime="20220204 18:23:02.022"/>
+<status status="PASS" starttime="20220310 14:24:02.871" endtime="20220310 14:24:05.009"/>
 </kw>
 <kw name="Verify Cart" library="EmagProductPage">
+<arg>${ProductName}</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CartTabTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220204 18:23:02.024" endtime="20220204 18:23:02.074"/>
+<status status="PASS" starttime="20220310 14:24:05.015" endtime="20220310 14:24:05.271"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${PS}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220204 18:23:02.372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220204 18:23:02.087" endtime="20220204 18:23:02.372"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${NameOfProduct}</var>
+<arg>${ProductFromCart}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220310 14:24:05.304" level="INFO">${NameOfProduct} = Consola PlayStation 5 (B-Chassis) + Joc PS5 Gran Turismo 7 + Joc PS5 Horizon Forbidden West + Joc PS5 Marvel’s Spider Man: Miles Morales + PSPlus 365 zile + PSCard 100 RON</msg>
+<status status="PASS" starttime="20220310 14:24:05.272" endtime="20220310 14:24:05.304"/>
 </kw>
-<msg timestamp="20220204 18:23:02.429" level="FAIL">Element with locator '//a[contains(.,'Consola PlayStation 5 (B-Chasis) + Joc PS5 Ratchet &amp; Clank: Rift Apart + Joc Marvel’s Spider Man: Miles Morales PS5 + Joc Demon`s Soul Remake! PS5')]' not found.</msg>
-<status status="FAIL" starttime="20220204 18:23:02.074" endtime="20220204 18:23:02.429"/>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${ProductName}</arg>
+<arg>${NameOfProduct}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220310 14:24:05.304" endtime="20220310 14:24:05.304"/>
 </kw>
-<status status="FAIL" starttime="20220204 18:23:02.023" endtime="20220204 18:23:02.430"/>
+<status status="PASS" starttime="20220310 14:24:05.014" endtime="20220310 14:24:05.305"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220204 18:23:02.431" endtime="20220204 18:23:02.432"/>
+<status status="PASS" starttime="20220310 14:24:05.305" endtime="20220310 14:24:08.672"/>
 </kw>
-<status status="FAIL" starttime="20220204 18:22:51.316" endtime="20220204 18:23:02.432">Element with locator '//a[contains(.,'Consola PlayStation 5 (B-Chasis) + Joc PS5 Ratchet &amp; Clank: Rift Apart + Joc Marvel’s Spider Man: Miles Morales PS5 + Joc Demon`s Soul Remake! PS5')]' not found.</status>
+<status status="PASS" starttime="20220310 14:23:46.799" endtime="20220310 14:24:08.673"/>
 </test>
-<status status="FAIL" starttime="20220204 18:22:50.897" endtime="20220204 18:23:02.435"/>
+<status status="PASS" starttime="20220310 14:23:46.117" endtime="20220310 14:24:08.676"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Emag">Emag</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Emag">Emag</stat>
 </suite>
 </statistics>
 <errors>
